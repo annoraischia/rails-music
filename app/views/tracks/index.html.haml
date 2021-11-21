@@ -1,0 +1,29 @@
+- 4.times do
+    %br
+%table
+    %thead
+        %tr
+            %th Title
+            %th Time
+            %th Artist
+            %th Album
+            %th Genre
+            %th Actions
+    %tbody
+        - @tracks.each do |track|
+            %tr
+                %td
+                    = track.title
+                %td
+                    = track.time
+                %td
+                    = track.artist 
+                %td
+                    = track.album
+                %td
+                    = link_to edit_track_path(track.id) do
+                        Edit
+                    = link_to track_path(track.id), method: :delete, data: { confirm: "Are you sure?"} do
+                        Delete
+    = link_to new_track_path do
+        Add Track

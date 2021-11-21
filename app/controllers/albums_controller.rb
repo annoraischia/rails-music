@@ -50,5 +50,3 @@ class AlbumsController < ApplicationController
         params.require(:artist).permit(:name, :released, :length, :kind)
     end
 end
-end
-end
