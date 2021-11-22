@@ -1,6 +1,34 @@
 %h1 Welcome to your library.
 %p Here are your albums.
-- 3.times do
+- 2.times do
   %br
+%table
+  %thead
+    %tr
+      %th Title
+      %th Artist
+      %th Year
+      %th Genre
+      %th 
+  %tbody
+    - @albums.each do |album|
+      %tr
+        %td
+          = album.name
+        %td
+          = album.artist
+        %td
+          = album.year
+        %td
+          = album.genre
+        %td
+          = link_to edit_album_path(album.id) do
+            Edit
+          = "&nbsp".html_safe
+          = link_to album_path(album.id), medthod: :delete, data: { confirm: "Delete album?"} do
+            Delete
+%br
+= link_to new_album_path do
+
 
       
