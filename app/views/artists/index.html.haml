@@ -1,11 +1,22 @@
 %h1 Welcome to your library.
 %p
   Here are your favorite artists.
+
+%br
+
+= link_to albums_path do
+  See albums
+  %br
+= link_to tracks_path do
+  See tracks
+
 - 2.times do
   %br
+
 %table
   %thead
     %tr
+      %th
       %th Name
       %th Discography
       %th Genre
@@ -13,6 +24,8 @@
   %tbody
     - @artists.each do |artist|
       %tr
+        %td
+          = artist.avatar_url
         %td
           = artist.name
         %td

@@ -1,0 +1,14 @@
+= form_with model: @artist do |f|
+    = f.label :artist
+    = f.text_field :artist
+  
+    %br/
+  
+    = f.label :genre
+    = f.text_field :genre
+
+    %br/
+    = f.submit
+  
+    = link_to artists_path do
+        Back to Artists

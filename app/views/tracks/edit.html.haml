@@ -1,0 +1,32 @@
+= form_with model: @track do |f|
+    = f.label :title
+    = f.text_field :title
+  
+    %br/
+  
+    = f.label :length
+    = f.text_field :length
+  
+    %br/
+  
+    = f.label :artist
+    = f.text_field :artist
+  
+    %br/
+
+    = f.label :album
+    = f.text_field :album
+  
+    %br/
+    = f.label :genre
+    = f.text_field :genre
+
+    %br/
+    = f.label :url
+    = f.text_area :url
+
+    %br/
+    = f.submit
+  
+    = link_to tracks_path do
+        Back to Artists

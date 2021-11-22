@@ -6,6 +6,7 @@ class CreateTracks < ActiveRecord::Migration[6.1]
       t.string :length
       t.string :artist
       t.string :album
+      t.string :genre
       t.boolean :available
       
       t.timestamps

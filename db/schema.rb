@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_11_20_014933) do
     t.string "length"
     t.string "artist"
     t.string "album"
+    t.string "genre"
     t.boolean "available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

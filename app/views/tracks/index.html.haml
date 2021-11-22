@@ -1,5 +1,18 @@
-- 4.times do
+%h1 Welcome to your library.
+%p
+    Here are your tracks.
+
+%br
+
+= link_to artists_path do
+    See artists
+%br
+= link_to albums_path do
+    See albums
+
+- 2.times do
     %br
+
 %table
     %thead
         %tr
@@ -8,6 +21,7 @@
             %th Artist
             %th Album
             %th Genre
+            %th Listen
             %th Actions
     %tbody
         - @tracks.each do |track|
@@ -20,6 +34,10 @@
                     = track.artist 
                 %td
                     = track.album
+                %td
+                    = track.genre
+                %td
+                    = track.url
                 %td
                     = link_to edit_track_path(track.id) do
                         Edit

@@ -1,7 +1,18 @@
 %h1 Welcome to your library.
-%p Here are your albums.
+%p
+  Here are your favorite albums.
+
+%br
+
+= link_to artists_path do
+  See artists
+  %br
+= link_to tracks_path do
+  See tracks
+
 - 2.times do
   %br
+
 %table
   %thead
     %tr
