@@ -8,13 +8,16 @@
     %tr
       %th Name
       %th Discography
-      %th
+      %th Genre
+      %th 
   %tbody
     - @artists.each do |artist|
       %tr
         %td
           = artist.name
         %td
+        %td
+          = artist.genre
         %td
           = "&nbsp".html_safe
           = link_to edit_artist_path(artist.id) do

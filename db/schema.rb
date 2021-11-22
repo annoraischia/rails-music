@@ -14,34 +14,37 @@ ActiveRecord::Schema.define(version: 2021_11_20_014933) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
-    t.boolean "released"
-    t.datetime "released_at"
+    t.string "artist"
+    t.string "type"
+    t.boolean "year"
+    t.string "genre"
     t.time "length"
     t.string "cover_art_url"
-    t.string "kind"
+    t.boolean "released"
+    t.datetime "released_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.string "permalink"
-    t.text "bio"
+    t.string "avatar_url"
+    t.string "cover_photo_url"
+    t.string "genre"
     t.datetime "formed_at"
     t.boolean "verified"
     t.datetime "verified_at"
-    t.string "avatar_url"
-    t.string "cover_photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tracks", force: :cascade do |t|
     t.string "url"
-    t.string "name"
-    t.text "credits"
-    t.boolean "available"
+    t.string "title"
     t.time "length"
+    t.string "artist"
+    t.string "album"
+    t.boolean "available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
