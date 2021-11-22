@@ -3,7 +3,7 @@ class CreateTracks < ActiveRecord::Migration[6.1]
     create_table :tracks do |t|
       t.string :url
       t.string :title
-      t.time :length
+      t.string :length
       t.string :artist
       t.string :album
       t.boolean :available

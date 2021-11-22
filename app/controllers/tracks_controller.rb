@@ -50,6 +50,3 @@ class TracksController < ApplicationController
         params.require(:track).permit(:name, :length)
     end
 end
-end
-
-end

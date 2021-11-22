@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_11_20_014933) do
   create_table "tracks", force: :cascade do |t|
     t.string "url"
     t.string "title"
-    t.time "length"
+    t.string "length"
     t.string "artist"
     t.string "album"
     t.boolean "available"

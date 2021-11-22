@@ -4,7 +4,7 @@
     %thead
         %tr
             %th Title
-            %th Time
+            %th Length
             %th Artist
             %th Album
             %th Genre
@@ -15,7 +15,7 @@
                 %td
                     = track.title
                 %td
-                    = track.time
+                    = track.length
                 %td
                     = track.artist 
                 %td
@@ -25,5 +25,6 @@
                         Edit
                     = link_to track_path(track.id), method: :delete, data: { confirm: "Are you sure?"} do
                         Delete
-    = link_to new_track_path do
-        Add Track
+%br
+= link_to new_track_path do
+    Add Track
