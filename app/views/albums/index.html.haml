@@ -10,8 +10,13 @@
 = link_to tracks_path do
   See tracks
 
-- 2.times do
+- 3.times do
   %br
+
+= link_to new_album_path do
+  Add Album
+  
+%br
 
 %table
   %thead
@@ -41,8 +46,5 @@
           = "&nbsp".html_safe
           = link_to album_path(album.id), medthod: :delete, data: { confirm: "Delete album?"} do
             Delete
-%br
-= link_to new_album_path do
-  New Album
 
       

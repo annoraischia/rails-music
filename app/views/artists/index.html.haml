@@ -10,8 +10,13 @@
 = link_to tracks_path do
   See tracks
 
-- 2.times do
+- 3.times do
   %br
+
+= link_to new_artist_path do
+  Add Artist
+  
+%br
 
 %table
   %thead
@@ -38,6 +43,3 @@
           = "&nbsp".html_safe
           = link_to artist_path(artist.id), method: :delete, data: { confirm: "Delete artist?"} do
             Delete
-%br
-= link_to new_artist_path do
-  New Artist

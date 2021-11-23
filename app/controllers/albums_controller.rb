@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
 
         if @album.save
             flash[:notice] = 'Album was successfully added'
-            redirect_to artists_path
+            redirect_to albums_path
         else
             flash[:error] = 'Errors encountered in adding Album'
             render :new
@@ -35,7 +35,7 @@ class AlbumsController < ApplicationController
     end
 
     def destroy
-        @artist.destroy
+        @album.destroy
 
         redirect_to albums_path, notice: 'Album was successfully deleted'
     end
@@ -47,6 +47,6 @@ class AlbumsController < ApplicationController
     end
 
     def album_params
-        params.require(:artist).permit(:name, :released, :length, :kind)
+        params.require(:album).permit(:name, :artist, :type, :year, :genre, :length, :cover_art_url)
     end
 end
